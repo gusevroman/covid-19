@@ -3,7 +3,9 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "react-app",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "airbnb",
+    "airbnb/hooks"
   ],
   "env": {
     "browser": true,
@@ -18,7 +20,23 @@
   "rules": {
     "no-console": "warn",
     "strict": ["error", "global"],
-    "curly": "warn"
+    "curly": "warn",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "always-multiline",
+        "imports": "always-multiline",
+        "objects": "always"
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": 0,
+    "prettier/prettier": ["error"],
+    "compat/compat": "off",
+    "jsx-a11y/click-events-have-key-events": "off"
   },
-  "plugins": ["import","prettier", "react", "jsx-a11y", "no-loops", "babel"],
+  "plugins": ["import", "prettier", "react", "jsx-a11y", "no-loops", "babel"]
 }
